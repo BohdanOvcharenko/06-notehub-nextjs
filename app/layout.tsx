@@ -1,15 +1,15 @@
-
-import Header from "@/components/Header/Header";
-import "./globals.css";
-import Footer from "@/components/Footer/Footer";
 import type { Metadata } from 'next';
+
+import './globals.css';
+
 import TanStackProvider from '@/components/TanStackProvider/TanStackProvider';
+import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
 
 export const metadata: Metadata = {
   title: 'NoteHub',
   description: 'Notes application',
 };
-
 
 export default function RootLayout({
   children,
@@ -17,12 +17,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" >
-      <Header />
-      <TanStackProvider>
-        <body>{children}</body>
-      </TanStackProvider>
-      <Footer />
+    <html lang="en">
+      <body>
+        <Header />
+
+        <TanStackProvider>
+          {children}
+        </TanStackProvider>
+
+        <Footer />
+      </body>
     </html>
   );
 }
