@@ -19,13 +19,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <TanStackProvider>
+
         <Header />
 
-        <TanStackProvider>
           {children}
-        </TanStackProvider>
 
-        <Footer />
+          <Footer />
+          
+        </TanStackProvider>
       </body>
     </html>
   );
