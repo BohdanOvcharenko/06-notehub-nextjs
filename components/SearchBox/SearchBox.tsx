@@ -4,7 +4,7 @@ interface SearchBoxProps {
   onSearch: (value: string) => void;
 }
 
-function SearchBox({onSearch}: SearchBoxProps) {
+export default function SearchBox({onSearch}: SearchBoxProps) {
   return (
     <input
       className={css.input}
@@ -17,4 +17,3 @@ function SearchBox({onSearch}: SearchBoxProps) {
   );
 }
 
-export default SearchBox

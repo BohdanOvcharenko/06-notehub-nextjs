@@ -16,7 +16,7 @@ interface PaginationProps {
   onPageChange: (selectedPage: number) => void;
 }
 
-function Pagination({pageCount, currentPage, onPageChange}: PaginationProps) {
+export default function Pagination({pageCount, currentPage, onPageChange}: PaginationProps) {
   return (
     <ReactPaginate
       breakLabel="..."
@@ -35,4 +35,3 @@ function Pagination({pageCount, currentPage, onPageChange}: PaginationProps) {
   );
 }
 
-export default Pagination;

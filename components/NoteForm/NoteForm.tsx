@@ -40,7 +40,7 @@ const initialValues: FormValues = {
   tag: 'Todo',
 };
 
-function NoteForm({onClose}: NoteFormProps) {
+export default function NoteForm({onClose}: NoteFormProps) {
   const queryClient = useQueryClient();
   const mutation = useMutation({
   mutationFn: createNote,
@@ -174,4 +174,3 @@ function NoteForm({onClose}: NoteFormProps) {
   );
 }
 
-export default NoteForm;

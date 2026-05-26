@@ -9,7 +9,7 @@ interface ModalProps {
 }
 
 
-function Modal({ children, onClose }: ModalProps) {
+export default function Modal({ children, onClose }: ModalProps) {
   useEffect(() => {
   const handleEscape = (
     event: KeyboardEvent
@@ -51,4 +51,3 @@ function Modal({ children, onClose }: ModalProps) {
     );
 }
 
-export default Modal
